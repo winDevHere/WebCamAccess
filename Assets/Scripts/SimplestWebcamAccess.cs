@@ -4,10 +4,11 @@ using UnityEngine.UI;
 public class SimplestWebcamAccess : MonoBehaviour
 {
     [SerializeField] RawImage display;
+    WebCamTexture cam;
 
     void Start()
     {
-        WebCamTexture cam = new WebCamTexture();
+        cam = new();
         display.texture = cam;
         cam.Play();
     }
